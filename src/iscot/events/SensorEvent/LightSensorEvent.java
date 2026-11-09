@@ -4,10 +4,13 @@ import iscot.enums.Areas;
 import iscot.enums.Type;
 
 public class LightSensorEvent extends SensorEvent {
-
-	public LightSensorEvent(Areas area, Type type) {
+private final double light;
+	public LightSensorEvent(Areas area, Type type, double light) {
 		super(area, type);
-		// TODO Auto-generated constructor stub
+		this.light=light;
+		
 	}
-
+public double getLight() {
+	return light;
+}
 }

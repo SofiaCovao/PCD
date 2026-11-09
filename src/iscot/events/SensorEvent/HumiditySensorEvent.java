@@ -4,10 +4,16 @@ import iscot.enums.Areas;
 import iscot.enums.Type;
 
 public class HumiditySensorEvent extends SensorEvent {
+	private final double humidity;
 
-	public HumiditySensorEvent(Areas area, Type type) {
+	public HumiditySensorEvent(Areas area, Type type, double humidity) {
 		super(area, type);
-		// TODO Auto-generated constructor stub
+		this.humidity=humidity; 
+		
 	}
 
+	public double getHumidity() {
+		return humidity;
+	}
+	
 }

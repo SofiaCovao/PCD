@@ -7,6 +7,7 @@ import iscot.client.gui.LightIcon;
 import iscot.client.gui.SensorControl;
 import iscot.enums.Areas;
 import iscot.enums.Type;
+import iscot.events.SensorEvent.HumiditySensorEvent;
 
 public class HumiditySensor {
 
@@ -40,8 +41,13 @@ public class HumiditySensor {
 			SensorControl sensorControl= new SensorControl( "☀", "Humidade - "+area, "%",
 				    0, 100, 1, 50,
 				    valor -> {
-				    	// TODO handle change in sensor
-				    	System.out.println("Mudou para:"+valor);
+				    	HumiditySensorEvent evento = new HumiditySensorEvent(area, Type.SENSOR, valor);
+				    	
+				    	System.out.println("Área: " + evento.getArea());
+				    	System.out.println("Tipo: " + evento.getType());
+				    	System.out.println("Humidade: " + evento.getHumidity());
+				    	
+				    	
 				    });
 			painel.add(sensorControl,BorderLayout.CENTER);
 			janela.setContentPane(painel);

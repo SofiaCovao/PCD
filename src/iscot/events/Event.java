@@ -1,6 +1,5 @@
 package iscot.events;
 
-
 import iscot.enums.Areas;
 import iscot.enums.Type;
 

@@ -16,6 +16,7 @@ import iscot.client.gui.LightIcon;
 import iscot.client.gui.VentilatorIcon;
 import iscot.enums.Areas;
 import iscot.enums.Type;
+import iscot.events.HighLevelOrderEvent.AreaVentilationOrderEvent;
 
 public class Ventilator {
 
@@ -55,8 +56,12 @@ public class Ventilator {
 			janela.pack();
 			janela.setVisible(true);
 			
-			Thread.sleep(5000);
-			ventilator.setAtivo(true);
+			
+			
+			AreaVentilationOrderEvent evento = new AreaVentilationOrderEvent(area, Type.DECIDER, true);
+			
+			
+			ventilator.setAtivo(evento.getState());
 
 			// TODO: receive and handle messages from server
 			

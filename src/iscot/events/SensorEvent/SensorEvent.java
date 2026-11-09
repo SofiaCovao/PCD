@@ -8,7 +8,7 @@ public class SensorEvent extends Event{
 
 	public SensorEvent(Areas area, Type type) {
 		super(area, type);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }

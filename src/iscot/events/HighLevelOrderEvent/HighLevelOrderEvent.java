@@ -8,7 +8,7 @@ public class HighLevelOrderEvent extends Event  {
 
 	public HighLevelOrderEvent(Areas area, Type type) {
 		super(area, type);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }

@@ -8,7 +8,7 @@ public class RegistrationEvent extends Event {
 
 	public RegistrationEvent(Areas area, Type type) {
 		super(area, type);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }
