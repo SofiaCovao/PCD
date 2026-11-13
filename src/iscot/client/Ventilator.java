@@ -56,7 +56,7 @@ public class Ventilator {
 			janela.pack();
 			janela.setVisible(true);
 			
-			
+			Thread.sleep(2000);
 			
 			AreaVentilationOrderEvent evento = new AreaVentilationOrderEvent(area, Type.DECIDER, true);
 			
