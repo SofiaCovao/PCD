@@ -29,7 +29,7 @@ public class LightSensor {
 			// Criar os componentes gráficos
 			JPanel painel=new JPanel();
 			painel.setLayout(new BorderLayout());
-			SensorControl sensorControl= new SensorControl( "💡", "Luminosidade - "+area, "%",
+			SensorControl sensorControl= new SensorControl( "💡", "Luminosidade - "+area, "lux",
 				    0, 1000, 1, 50,
 				    valor -> {
 				    	LightSensorEvent evento = new LightSensorEvent(area, Type.SENSOR, valor);

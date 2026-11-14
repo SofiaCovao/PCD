@@ -12,7 +12,7 @@ public class GroundMoistureSensorEvent extends SensorEvent {
 		
 	}
 
-	public double getGroundMiosture() {
+	public double getGroundMoisture() {
 		return groundMoisture;
 	}
 }
