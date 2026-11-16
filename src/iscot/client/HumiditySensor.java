@@ -1,6 +1,8 @@
 package iscot.client;
 
 import java.awt.BorderLayout;
+import java.io.IOException;
+import java.net.Socket;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import iscot.client.gui.LightIcon;
@@ -20,12 +22,14 @@ public class HumiditySensor {
 	 * @throws NumberFormatException 
 	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) throws NumberFormatException, InterruptedException {
+	public static void main(String[] args) throws NumberFormatException, InterruptedException, IOException {
 		if(args.length!=3) {
 			System.err.println("Invalid arguments!");
 		}
 		else {
 			// TODO connect to the server
+			Socket socket = new Socket(args[0], Integer.parseInt(args[1]));
+			
 
 			// TODO register with the server
 			Areas area=Areas.valueOf(args[2]);
@@ -47,8 +51,8 @@ public class HumiditySensor {
 				    	System.out.println("Tipo: " + evento.getType());
 				    	System.out.println("Humidade: " + evento.getHumidity());
 				    	
-				    	
 				    });
+			
 			painel.add(sensorControl,BorderLayout.CENTER);
 			janela.setContentPane(painel);
 			janela.setLocation(600, 400);

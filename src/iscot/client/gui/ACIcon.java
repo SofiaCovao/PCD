@@ -8,7 +8,7 @@ import iscot.enums.AirConditioningMode;
 public class ACIcon extends ComponentState {
 	
 	
-	private AirConditioningMode mode = AirConditioningMode.Desligado;
+	private AirConditioningMode mode = AirConditioningMode.Desligado; 
 	private double temperature = -1;
 
 	public boolean isLigado() {

@@ -1,4 +1,3 @@
-
 package iscot.client;
 
 import java.awt.BorderLayout;
