@@ -28,7 +28,6 @@ public class Server {
 			  ClientHandler cliente = new ClientHandler(socket);
 			  cliente.start();
 
-			  
 			}
 
 			} finally {
